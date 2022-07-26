@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    chitraguptan (0.1.0)
+    chitraguptan (0.1.0.alpha)
       rails (>= 7.0.3.1)
       redis (>= 4)
 
