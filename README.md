@@ -57,19 +57,20 @@ Build the whole feature inside this repo and then extract it to a gem
 4. Load existing variables and set them in redis if they don't exist (during boot) - https://github.com/coderhs/chitraguptan/labels/Done
 5. Admin UI to CRUD manage the variables - https://github.com/coderhs/chitraguptan/labels/Done
 6. Extract the code to its own gem - https://github.com/coderhs/chitraguptan/labels/Done
-7. Create gem install scripts
+7. Add to admin UI - Delete key
+8. Create gem install scripts
    1. Create migration to persist data
    2. Create initializer file
    3. add engine route to rails app routes
-8. Move get/set/delete/update to its own service classes
-9. Write test for whole code
-10. Control following settings from initializer
+9. Move get/set/delete/update to its own service classes
+10. Write test for whole code
+11. Control following settings from initializer
    1. Redis URL
    2. Auto persistance of variables
    3. Auto load for variables during boot
    4. Disable persistance in DB
-11. Write more API documentation
-12. Release the gem to rubygems
+12. Write more API documentation
+13. Release the gem to rubygems
 
 ## Nice to have
 
