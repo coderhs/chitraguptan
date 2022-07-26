@@ -45,6 +45,11 @@ Now this variable will be set as `chitraguptan:week_rssi` in your redis database
 stored in your database inside the table: chitraguptan_variabels. The table has 3 fields
 id, key, value  - (int 32, varchar, jsonb)
 
+## Current ADMIN UI
+
+![image](https://user-images.githubusercontent.com/979321/180947183-cc861cb1-c38e-4179-86dc-35079e1145d8.png)
+
+
 ## Purpose of this repo
 
 Build the whole feature inside this repo and then extract it to a gem
