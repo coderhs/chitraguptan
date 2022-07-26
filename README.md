@@ -51,12 +51,12 @@ Build the whole feature inside this repo and then extract it to a gem
 
 ## Things to do
 
-1. Connect to redis - Done
-2. Configuration to add prefix to the variables used - Done
-3. Define api to set data, delete data, give default if data doesn't exist - Done
-4. Load existing variables and set them in redis if they don't exist (during boot) - Done
-5. Admin UI to CRUD manage the variables - Done
-6. Extract the code to its own gem - Done
+1. Connect to redis - https://github.com/coderhs/chitraguptan/labels/Done
+2. Configuration to add prefix to the variables used - https://github.com/coderhs/chitraguptan/labels/Done
+3. Define api to set data, delete data, give default if data doesn't exist - https://github.com/coderhs/chitraguptan/labels/Done
+4. Load existing variables and set them in redis if they don't exist (during boot) - https://github.com/coderhs/chitraguptan/labels/Done
+5. Admin UI to CRUD manage the variables - https://github.com/coderhs/chitraguptan/labels/Done
+6. Extract the code to its own gem - https://github.com/coderhs/chitraguptan/labels/Done
 7. Create gem install scripts
    1. Create migration to persist data
    2. Create initializer file
