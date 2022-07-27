@@ -1,9 +1,11 @@
 module Chitraguptan
   class Config
-    def initialize(redis = Redis.new, prefix='chitraguptan', persist=true)
+    def initialize(redis = Redis.new,
+                   prefix='chitraguptan',
+                   persist=true)
       @redis  = redis
       @prefix = prefix
-      @persis = persist
+      @persit = persist
     end
 
     attr_reader :redis, :prefix, :persist
