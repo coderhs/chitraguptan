@@ -42,7 +42,10 @@ module Chitraguptan
     end
 
     def load_object
-      @object ||= Chitraguptan::Main.new(Chitraguptan::Config.new(redis, prefix, persist))
+      @object ||= Chitraguptan::Main.new(Chitraguptan::Config.new(redis,
+                                                                  prefix,
+                                                                  persist,
+                                                                  disable_auto_load))
     end
   end
 end

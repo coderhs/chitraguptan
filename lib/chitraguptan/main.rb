@@ -62,7 +62,7 @@ class Chitraguptan::Main
   end
 
   def setup
-    confirm_key_exist_if_not_load # this should be configurable as it would slow down the rails app boot time
+    confirm_key_exist_if_not_load unless config.do_not_auto_load # this should be configurable as it would slow down the rails app boot time
   end
 
   def confirm_key_exist_if_not_load
