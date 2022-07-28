@@ -41,8 +41,7 @@ The aim of this project is to reduce the burden of managing variables. It is esp
 ```
 
 Now this variable will be set as `chitraguptan:week_rssi` in your redis database and also
-stored in your database inside the table: chitraguptan_variables. The table has 3 fields:
-id, key, value  - (int 32, varchar, jsonb)
+stored in your database inside the table: chitraguptan_variables. The table has 3 fields namely, id, key and value (int 32, varchar and jsonb). 
 
 ## Current ADMIN UI
 
