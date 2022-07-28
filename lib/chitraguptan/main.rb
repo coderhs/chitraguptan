@@ -76,13 +76,13 @@ class Chitraguptan::Main
   end
 
   def get_raw_key(raw_key)
-    @config.redis.get(raw_key)
+    config.redis.get(raw_key)
   end
 
   def set_key(key, default)
     raise Chitraguptan::Errors::NoDefault unless default
 
-    @config.redis.set(encode_key(key), { value: default }.to_json)
+    config.redis.set(encode_key(key), { value: default }.to_json)
   end
 
   def del_key(key)
@@ -90,7 +90,7 @@ class Chitraguptan::Main
   end
 
   def del_raw_key(key)
-    @config.redis.del(key)
+    config.redis.del(key)
   end
 
   def persist_key(key)
