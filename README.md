@@ -30,8 +30,8 @@ So they can be used as:
   where('rssi < ?', RfidSetting.first.weak_rssi)
 ```
 
-The first two, requires re-deploying our rails app, and committing or changing files.
-The last one requires you to create and maintain an extra model, but it does allow
+The first two of the above, requires re-deploying our rails app, and committing or changing files.
+The last one requires creating and maintaining an extra model. But it does allow
 one to change the variables on the file.
 
 The aim of this project is to reduce the burden of managing variables. It is especially useful in building feature simple feature toggles.
