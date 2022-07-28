@@ -29,7 +29,7 @@ module Chitraguptan
       load_object.get(key)
     end
 
-    def update(key, value: )
+    def update(key, value: nil)
       load_object.update(key, value)
     end
 

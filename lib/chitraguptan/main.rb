@@ -6,7 +6,7 @@ class Chitraguptan::Main
 
   attr_reader :config
 
-  def get(key, default)
+  def get(key, default=nil)
     value = get_key(key)
     return parse_and_fetch(value) if value
 
@@ -21,8 +21,8 @@ class Chitraguptan::Main
     false
   end
 
-  def update(key, value)
-    set_key(key, value) if value
+  def update(key, value=nil)
+    set_key(key, value)
     persist_key(key)
     true
   end
@@ -80,8 +80,6 @@ class Chitraguptan::Main
   end
 
   def set_key(key, default)
-    raise Chitraguptan::Errors::NoDefault unless default
-
     config.redis.set(encode_key(key), { value: default }.to_json)
   end
 
