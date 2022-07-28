@@ -8,7 +8,9 @@ class Chitraguptan::Main
 
   def get(key, default=nil)
     value = get_key(key)
-    return parse_and_fetch(value) if value
+    response = parse_and_fetch(value) if value
+    return response if response
+    return response unless default
 
     set_key(key, default)
     persist_key(key)
