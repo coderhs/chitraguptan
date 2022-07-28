@@ -49,6 +49,39 @@ id, key, value  - (int 32, varchar, jsonb)
 
 ![image](https://user-images.githubusercontent.com/979321/180947183-cc861cb1-c38e-4179-86dc-35079e1145d8.png)
 
+## Installation
+
+Disclaimer: Currently this project is in active development.
+
+To install this gem add the following to your Gemfile.
+
+```rb
+gem 'chitraguptan', github: 'coderhs/chitraguptan'
+```
+
+then run `bundle install`
+
+followed by
+
+```sh
+bundle exec rails generate chitraguptan:install
+```
+
+This will add an initializer file and admin url to your application routes.
+
+The values you can control from initializer files are:
+```rb
+config.redis            = Redis.new # Provide connection string to your local or remote redis host
+config.prefix           = 'chitraguptan' # We use the prefix to namespace the variables inserted and managed by the gem.
+config.persist          = false # Persist flag will auto save all variables to your database, thus safeguarding it from a redis restart or crash
+config.do_not_auto_load = true  # Auto load the existing value in the DB to redis on boot
+```
+
+If you are enabling the persist flag, you will need to add the migration to your rails app.
+
+```sh
+bundle exec rails generate chitraguptan:migrations
+```
 
 ## Purpose of this repo
 
@@ -63,17 +96,17 @@ Build the whole feature inside this repo and then extract it to a gem
 5. Admin UI to CRUD manage the variables - https://github.com/coderhs/chitraguptan/labels/Done
 6. Extract the code to its own gem - https://github.com/coderhs/chitraguptan/labels/Done
 7. Add to admin UI - Delete key
-8. Create gem install scripts
-   1. Create migration to persist data
-   2. Create initializer file
-   3. add engine route to rails app routes
+8. Create gem install scripts - https://github.com/coderhs/chitraguptan/labels/Done
+   1. Create migration to persist data - https://github.com/coderhs/chitraguptan/labels/Done
+   2. Create initializer file -  https://github.com/coderhs/chitraguptan/labels/Done
+   3. add engine route to rails app routes - https://github.com/coderhs/chitraguptan/labels/Done
 9. Move get/set/delete/update to its own service classes
 10. Write test for whole code
 11. Control following settings from initializer
    1. Redis URL
-   2. Auto persistance of variables
-   3. Auto load for variables during boot
-   4. Disable persistance in DB
+   2. Auto persistance of variables - https://github.com/coderhs/chitraguptan/labels/Done
+   3. Auto load for variables during boot - https://github.com/coderhs/chitraguptan/labels/Done
+   4. Disable persistance in DB - https://github.com/coderhs/chitraguptan/labels/Done
 12. Write more API documentation
 13. Release the gem to rubygems
 
