@@ -62,7 +62,7 @@ class Chitraguptan::Main
   end
 
   def setup
-    confirm_key_exist_if_not_load unless config.do_not_auto_load # this should be configurable as it would slow down the rails app boot time
+    confirm_key_exist_if_not_load unless config.disable_auto_load # this should be configurable as it would slow down the rails app boot time
   end
 
   def confirm_key_exist_if_not_load
@@ -92,6 +92,8 @@ class Chitraguptan::Main
   end
 
   def persist_key(key)
+    return unless config.persist
+
     Chitraguptan::Variable.where(key: key).first_or_initialize.update(value: { value: parse_and_fetch(get_key(key))}.to_json)
   end
 end
