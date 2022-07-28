@@ -34,14 +34,14 @@ The first two of the above, requires re-deploying our rails app, and committing 
 The last one requires creating and maintaining an extra model. But it does allow
 one to change the variables on the file.
 
-The aim of this project is to reduce the burden of managing variables. It is especially useful in building feature simple feature toggles.
+The aim of this project is to reduce the burden of managing variables. It is especially useful in building simple feature toggles.
 
 ```rb
   where('rssi < ?', Chitraguptan.get("week_rssi", default: 100))
 ```
 
 Now this variable will be set as `chitraguptan:week_rssi` in your redis database and also
-stored in your database inside the table: chitraguptan_variabels. The table has 3 fields:
+stored in your database inside the table: chitraguptan_variables. The table has 3 fields:
 id, key, value  - (int 32, varchar, jsonb)
 
 ## Current ADMIN UI
