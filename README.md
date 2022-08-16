@@ -101,10 +101,10 @@ Build the whole feature inside this repo and then extract it to a gem
 9. Move get/set/delete/update to its own service classes
 10. Write test for whole code
 11. Control following settings from initializer
-   1. Redis URL
-   2. Auto persistance of variables - https://github.com/coderhs/chitraguptan/labels/Done
-   3. Auto load for variables during boot - https://github.com/coderhs/chitraguptan/labels/Done
-   4. Disable persistance in DB - https://github.com/coderhs/chitraguptan/labels/Done
+     1. Redis URL
+     2. Auto persistance of variables - https://github.com/coderhs/chitraguptan/labels/Done
+     3. Auto load for variables during boot - https://github.com/coderhs/chitraguptan/labels/Done
+     4. Disable persistance in DB - https://github.com/coderhs/chitraguptan/labels/Done
 12. Write more API documentation
 13. Release the gem to rubygems
 
